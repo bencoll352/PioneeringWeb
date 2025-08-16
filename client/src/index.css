@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(20, 14.3%, 4.1%);
@@ -13,7 +15,7 @@
   --card-foreground: hsl(20, 14.3%, 4.1%);
   --border: hsl(20, 5.9%, 90%);
   --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(16, 100%, 50%);
+  --primary: hsl(14, 100%, 57%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(60, 4.8%, 95.9%);
   --secondary-foreground: hsl(24, 9.8%, 10%);
@@ -22,14 +24,18 @@
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
   --ring: hsl(20, 14.3%, 4.1%);
-  --radius: 0.5rem;
+  --radius: 0.75rem;
   
-  /* Brand colors matching the logo */
-  --brand-orange: hsl(16, 100%, 50%);
+  /* Enhanced Brand colors matching the new logo */
+  --brand-orange: hsl(14, 100%, 57%);
+  --brand-orange-light: hsl(14, 100%, 67%);
+  --brand-orange-dark: hsl(14, 100%, 47%);
   --brand-gray: hsl(220, 9%, 46%);
-  --dark-gray: hsl(220, 13%, 26%);
-  --logo-orange: hsl(16, 100%, 50%);
+  --brand-gray-light: hsl(220, 9%, 65%);
+  --dark-gray: hsl(220, 15%, 20%);
+  --logo-orange: hsl(14, 100%, 57%);
   --logo-gray: hsl(216, 12%, 52%);
+  --premium-gradient: linear-gradient(135deg, hsl(14, 100%, 57%), hsl(14, 100%, 47%));
 }
 
 .dark {
@@ -43,7 +49,7 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(16, 100%, 50%);
+  --primary: hsl(14, 100%, 57%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(240, 3.7%, 15.9%);
   --secondary-foreground: hsl(0, 0%, 98%);
@@ -61,11 +67,18 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
   }
 }
 
-/* Brand specific styles */
+/* Enhanced Brand specific styles */
 .brand-orange {
   color: var(--brand-orange);
 }
@@ -74,8 +87,16 @@
   background-color: var(--brand-orange);
 }
 
+.hover\:bg-brand-orange-dark:hover {
+  background-color: var(--brand-orange-dark);
+}
+
 .text-brand-gray {
   color: var(--brand-gray);
+}
+
+.text-brand-gray-light {
+  color: var(--brand-gray-light);
 }
 
 .text-dark-gray {
@@ -86,9 +107,16 @@
   background-color: var(--dark-gray);
 }
 
-/* Custom gradient for logo */
+/* Premium gradients */
 .brand-gradient {
-  background: linear-gradient(135deg, var(--brand-orange), hsl(11, 100%, 45%));
+  background: var(--premium-gradient);
+}
+
+.gradient-text {
+  background: var(--premium-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Smooth scroll behavior */
@@ -96,7 +124,180 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hero section overlay */
+/* Enhanced Hero section overlay */
 .hero-overlay {
-  background: linear-gradient(135deg, rgba(55, 65, 81, 0.8), rgba(75, 85, 99, 0.6));
+  background: linear-gradient(
+    135deg, 
+    rgba(33, 41, 52, 0.85), 
+    rgba(55, 65, 81, 0.75),
+    rgba(75, 85, 99, 0.65)
+  );
+}
+
+/* Modern animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Modern card shadows */
+.shadow-premium {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-premium-hover {
+  box-shadow: 0 20px 40px -4px rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Premium button hover effects */
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+/* Industry expertise badges */
+.expertise-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-50 text-orange-700 border border-orange-200;
+}
+
+/* Testimonial styles */
+.testimonial-card {
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border-left: 4px solid var(--brand-orange);
+}
+
+/* Stats counter animation */
+.stats-number {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Modern section spacing */
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+/* Enhanced focus states */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2;
+}
+
+/* Industry-specific gradients */
+.merchant-gradient {
+  background: linear-gradient(135deg, 
+    hsl(14, 100%, 57%) 0%, 
+    hsl(14, 100%, 47%) 50%, 
+    hsl(220, 15%, 20%) 100%);
+}
+
+/* Responsive text scaling */
+.text-responsive-xl {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+}
+
+.text-responsive-lg {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+}
+
+.text-responsive-md {
+  @apply text-lg sm:text-xl md:text-2xl;
 }
