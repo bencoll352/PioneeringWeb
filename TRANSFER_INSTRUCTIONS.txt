@@ -1,0 +1,50 @@
+PIONEERING RECRUITMENT - GITHUB TRANSFER INSTRUCTIONS
+
+== STEP 1: DOWNLOAD FROM REPLIT ==
+Download these folders/files from this Replit workspace:
+
+FOLDERS:
+- client/ (entire folder)
+- server/ (entire folder) 
+- shared/ (entire folder)
+- attached_assets/ (entire folder)
+
+FILES:
+- package.json
+- package-lock.json
+- vite.config.ts
+- tailwind.config.ts
+- tsconfig.json
+- components.json
+- drizzle.config.ts
+- postcss.config.js
+- README.md
+- replit.md
+- DEPLOYMENT.md
+- .gitignore
+
+== STEP 2: LOCAL COMMANDS ==
+Run these commands on your local machine:
+
+git clone https://github.com/bencoll352/PioneeringWeb.git
+cd PioneeringWeb
+
+[Copy all downloaded files into this folder]
+
+git add .
+git commit -m "Initial commit: Pioneering Recruitment builders merchant headhunting website"
+git push origin main
+
+== AUTHENTICATION ==
+Username: bencoll352
+Password: [Your GitHub Personal Access Token]
+
+== COMPLETE WEBSITE FEATURES ==
+✓ React/TypeScript frontend with modern UI
+✓ Express.js backend with PostgreSQL
+✓ Authentic builders merchant imagery (13 photos)
+✓ Headhunting positioning throughout
+✓ UK market focus and spelling
+✓ Professional contact forms
+✓ Complete service offerings
+✓ Money-back guarantee section
