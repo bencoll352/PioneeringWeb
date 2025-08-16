@@ -133,7 +133,7 @@ export default function Navigation() {
                   <div className="flex flex-col h-full">
                     <div className="flex items-center space-x-3 pb-6 border-b">
                       <img 
-                        src="/pioneering-logo.png" 
+                        src="/attached_assets/pioneering-logo.png" 
                         alt="Pioneering Recruitment Logo" 
                         className="h-10 w-auto"
                       />
