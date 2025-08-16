@@ -8,7 +8,7 @@ import Expertise from "@/components/expertise";
 import TrainingCoaching from "@/components/training-coaching";
 import MarketIntelligence from "@/components/market-intelligence";
 import Partnership from "@/components/partnership";
-
+import Testimonials from "@/components/testimonials";
 import About from "@/components/about";
 import Guarantee from "@/components/guarantee";
 import Contact from "@/components/contact";
@@ -27,6 +27,7 @@ export default function Home() {
       <TrainingCoaching />
       <MarketIntelligence />
       <Partnership />
+      <Testimonials />
       <About />
       <Guarantee />
       <Contact />
