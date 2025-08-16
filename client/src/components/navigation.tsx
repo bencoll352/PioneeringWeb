@@ -100,7 +100,7 @@ export default function Navigation() {
             {/* Logo */}
             <div className="flex items-center space-x-4 animate-fadeInLeft">
               <img 
-                src="/pioneering-logo.png" 
+                src="/attached_assets/pioneering-logo.png" 
                 alt="Pioneering Recruitment Logo" 
                 className="h-14 w-auto"
               />
